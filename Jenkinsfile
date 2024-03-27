@@ -3,5 +3,6 @@
 import org.emic.devsu.*
 
 mainPipeline {
-    
+    projectType = "springboot"
+   
 }
