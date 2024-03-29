@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app
+  name: sb-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nodejs-app
+      app: sb-app
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: sb-app
     spec:
       containers:
-      - name: nodejs-app
-        image: eingaruca/demosb:v1  # Reemplaza esto con la ubicación de tu imagen Docker
+      - name: sb-app
+        image: eingaruca/nodejs:v1
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-app-svc
+  name: sb-app-svc
 spec:
   selector:
-    app: nodejs-app
+    app: sb-app
   ports:
   - protocol: TCP
-    port: 8081
-    targetPort: 3000
+    port: 8080
+    targetPort: 8080
