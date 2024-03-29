@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sb-app
-        image: eingaruca/nodejs:v1
+        image: eingaruca/dsb:v1
         ports:
         - containerPort: 8080
 
