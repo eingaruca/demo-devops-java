@@ -1,7 +1,5 @@
 @Library('devops-pipelines@dev')
-
 import org.emic.devsu.*
-
 /*
  * Mandatory stages: Checkout & Build
  * Mantatory Variables
@@ -20,7 +18,18 @@ import org.emic.devsu.*
  *  - You decide if use codeAnalysis Variable. If you want test:
  *    - Variable Name: codeAnalysis
  *          - Boolean
- * 
+ * CODE COVERAGE (Optional Stage):
+ *  - You decide if use codeCoverage Variable. If you want test:
+ *    - Variable Name: codeCoverage
+ *          - Boolean
+ * DELIVERY (Optional Stage):
+ *  - You decide if use delivery Variable. If you want test:
+ *    - Variable Name: delivery
+ *          - Boolean
+ * DEPLOY (Optional Stage):
+ *  - You decide if use deploy Variable. If you want test:
+ *    - Variable Name: deploy
+ *          - Boolean
 */
 mainPipeline {
     projectType = "springboot"
