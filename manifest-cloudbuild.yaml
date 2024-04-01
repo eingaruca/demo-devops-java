@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sb-app
-        image: eingaruca/springboot:TAGVARIABLE
+        image: europe-west1-docker.pkg.dev/devsu-project/devsu-test/springboot:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
